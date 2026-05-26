@@ -309,56 +309,35 @@ img { max-width:100%; height:auto; display:block; }
     z-index: 1;
   }
 
-  /* ===== PAIN: 左にタイトル+結論、右にworry画像の2カラム ===== */
-  .pain-section { padding: 80px 40px; }
-  .pain-section {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 0 60px;
-    align-items: center;
-    max-width: 1240px;
-    margin: 0 auto;
-    text-align: left;
-  }
+  /* ===== PAIN: 縦並び維持。画像大きく、結論テキスト1行化 ===== */
+  .pain-section { padding: 80px 40px; text-align: center; }
   .pain-section .section-title {
-    text-align: left;
-    margin-bottom: 28px;
-    font-size: 32px;
+    font-size: 36px;
     line-height: 1.5;
-    grid-column: 1;
-    grid-row: 1;
-    white-space: nowrap;
+    margin-bottom: 36px;
   }
   .pain-visual {
-    max-width: 100%;
-    margin: 0;
-    grid-column: 2;
-    grid-row: 1 / span 3;
-    align-self: center;
+    max-width: 980px;
+    margin: 0 auto 32px;
   }
   .pain-conclusion {
-    text-align: left;
     font-size: 22px;
     margin-bottom: 12px;
-    grid-column: 1;
-    grid-row: 2;
   }
   .pain-conclusion-highlight {
-    text-align: left;
-    font-size: 30px;
+    font-size: 32px;
     line-height: 1.5;
-    grid-column: 1;
-    grid-row: 3;
+    white-space: nowrap;
   }
+  .pain-conclusion-highlight br { display: none; }
 
-  /* ===== VALUE: 左にテキスト+チェックリスト、右にメガホン画像の2カラム ===== */
+  /* ===== VALUE: 左にテキスト+チェックリスト、右にメガホン画像の2カラム(画像大きく) ===== */
   .value-section {
     padding: 90px 40px;
   }
   .value-section .value-inner-pc {
     display: grid;
-    grid-template-columns: 1.1fr 1fr;
+    grid-template-columns: 0.9fr 1.1fr;
     grid-template-areas:
       "title  image"
       "checks image";
@@ -366,14 +345,14 @@ img { max-width:100%; height:auto; display:block; }
     column-gap: 60px;
     row-gap: 24px;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
   }
   .value-section h2 {
     grid-area: title;
     text-align: left;
     margin-bottom: 0;
-    font-size: 34px;
+    font-size: 32px;
     line-height: 1.6;
   }
   .value-illustration {
@@ -389,7 +368,7 @@ img { max-width:100%; height:auto; display:block; }
     gap: 14px;
   }
   .check-item {
-    font-size: 20px;
+    font-size: 19px;
     padding: 18px 24px;
   }
 
@@ -412,8 +391,8 @@ img { max-width:100%; height:auto; display:block; }
     gap: 20px;
   }
   .strength-card-icon {
-    width: 140px;
-    height: 140px;
+    width: 200px;
+    height: 200px;
     order: -1;
     flex-shrink: 0;
   }
